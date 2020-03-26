@@ -1,0 +1,87 @@
+<!--
+Don't forget to upvote and comment.
+Thanks for 100+ upvotes.
+-->
+<html>
+    <head>
+      <script src="https://code.jquery.com/jquery-3.1.1.js"></script> <!-- //using jQuery to force the initial click on the input to activate soft keyboard --><title>
+Hack You, inspired by Err0r
+</title>
+<!-- Inspired by:
+ https://code.sololearn.com/WC8STo4FLIB6/?ref=app 
+
+Created originally by Russel Reeder-->
+    <style> /*some fun css tricks*/
+        body {
+    top:0px;
+    left:0px;
+    height:100vh;
+    width:100vw;
+}
+.container {
+ position:fixed;
+ display: block;
+ top:calc(0pt + 1vh);
+ left: calc(0vw + 1vw);
+ width:calc(100% - 2vw);
+ height:calc(100% - 2vh);
+ }
+#splash {
+ z-index:1000;
+ position:fixed;
+ display: block;
+ color: silver;
+ background-color:black;
+ top:calc(0pt + 1vh);
+ left: calc(0vw + 1vw);
+ width:calc(100% - 4vw);
+ height:calc(100% - 4vh);
+ text-decoration: underline;
+ text-align: center;
+ font-size: calc(1.1em);
+ border-top-right-radius:calc(1vh - 2px);
+ border-top-left-radius:calc(-2px + 1vh);
+ border-bottom-right-radius: calc(25px - 3vh);
+ border-bottom-left-radius: calc(-3vh + 25px);
+}
+#splash:hover {
+    margin-top:calc(0px + 100vh);
+    transition: calc(1.9s + 5s);
+}
+    </style>
+    </head>
+    <body><div class="container" onClick="clearInterval(hacked);//doesnt work, should stop hack typing when keyboard is not displayed">
+        <div id="splash" class="container" onClick="      document.getElementById('splash').innerHTML = ('Hacking in progress. Taking over keyboard.')//changes value of this element;
+        setTimeout(function(){ document.getElementById('splash').style.display = 'none'; },5000)//removes this element from the dom after 5s from click event;">Click me to get hacked.</div>
+ <div class="container">
+ <input style="width:97vw; height:100vh;" onInput="if (typedtext.slice(0, this.value.length) !== this.value){this.value=typedtext.slice(0, this.value.length-1)} else {this.value=typedtext.slice(0, this.value.length-1)}/*slices the string I use to hack the keyboard at the current length when input is typed; */; checkForDelete(event);"
+ onkeydown="checkForDelete(event)//handles backspace" onkeyup="checkForDelete(event)//handles backspace">
+    </div></div>
+    <script>
+        var x;
+        var hacked;
+var typedtext = "Hi. I am hacking you. You cannot type here anymore. This is just a test. See you soon. Inspired by ~ Err0r.";
+var target = document.getElementsByTagName ("input")[0];
+document.getElementById("splash").addEventListener("click", function(){
+
+
+
+    $("input").trigger('click');
+    $("input").trigger('focus');
+    hack();
+
+
+
+});
+function hack() {
+var hacked = setInterval(function(){ x = Math.ceil(target.value.length+1); document.getElementsByTagName("input")[0].value += typedtext.slice(x-1,x);
+if(x === typedtext.length){} },250)
+}
+var x = 0;
+function checkForDelete(e) {
+    k = e.which || e.code;
+    if (k) { event.preventDefault(); return false;}
+}
+        </script>
+    </body>
+</html>

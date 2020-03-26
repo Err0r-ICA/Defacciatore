@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>~ Err0r ~</title>
+<link href="https://fonts.googleapis.com/css?family=Nosifer" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+<style>
+
+body{
+background-color: black;
+background-image: url("https://i.imgur.com/1ioCaTP.gif");
+}
+
+
+.animation-container {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+z-index: 1;
+}
+
+.animation-container span {
+color:whitesmoke;
+display: block;
+font-size: 15px;
+font-family: 'Helvetica';
+text-shadow: 0 0 1px white;
+position: absolute;
+user-select: none;
+pointer-events: none;
+cursor: default;
+z-index: 1;
+opacity: 0;
+will-change: transform, opacity;
+animation-timing-function: ease-out;
+animation-name: move;
+}
+@keyframes move {
+0% {
+opacity: 0;
+transform: translateY(100vh);
+}
+25% {
+opacity: 1;
+}
+50% {
+opacity: 1;
+}
+75% {
+opacity: 0;
+}
+100% {
+opacity: 0;
+transform: none;
+}
+}
+
+h1{text-align: center;
+color:#fff;
+font-family:Nosifer;
+text-shadow:0 0 0.5em red, 0 0 0.5em red;
+}
+
+h2{margin: 0px 3%;
+text-align:center;
+font: 1em 'Pt Sans', sans-serif;
+font-weight: 200;
+letter-spacing:0.001em;
+color:#1B5E20;}
+
+#footer{
+display: block;
+background-color:#000;
+border-top:1px solid #00C853;
+border-bottom: 1px solid #00C853;
+font: 1em Sarpanch;
+}
+</style>
+</head>
+<body>
+<center><img src="https://avatarfiles.alphacoders.com/131/131078.png"></center>
+<h1 id="h1"><b>Anonymous </b></h1>
+<h2 id="h2"><b>Your SERVER has been hacked by ~ Err0r ~</font></br></br>
+
+
+
+That's just WARNING For You! </br></br>
+
+You know that your SECURITY is still LACKING and there are many holes in your SYSTEM. </br></br>
+
+Don't worry ADMIN, Your DATABASE is SAFE! Nothing deleted, WEjust changed the index page </br></br>
+
+PATCH your SYSTEM, otherwise, we will be back soon! </br></br>
+
+
+
+Nothing SECURITY Is Perfect... </b>
+
+</h2>
+<br><br>
+<script>
+var app = {
+
+chars: ['~ Err0r ~','Unleashed','127.0.0.1','Beware','Warning','Localhost','Cr4sH CoD3','HACKED!','Security','Breached!','System','Virus','Exploited','PWNED','Root'],
+
+init: function () {
+app.container = document.createElement('div');
+app.container.className = 'animation-container';
+document.body.appendChild(app.container);
+window.setInterval(app.add, 100);
+},
+
+add: function () {
+var element = document.createElement('span');
+app.container.appendChild(element);
+app.animate(element);
+},
+
+animate: function (element) {
+var character = app.chars[Math.floor(Math.random() * app.chars.length)];
+var duration = Math.floor(Math.random() * 15) + 1;
+var offset = Math.floor(Math.random() * (50 - duration * 2)) + 3;
+var size = 10 + (15 - duration);
+element.style.cssText = 'right:'+offset+'vw; font-size:'+size+'px;animation-duration:'+duration+'s';
+element.innerHTML = character;
+window.setTimeout(app.remove, duration * 1000, element);
+},
+
+remove: function (element) {
+element.parentNode.removeChild(element);
+},
+
+};
+
+document.addEventListener('DOMContentLoaded', app.init);
+</script><br><br><br>
+<div id="footer">
+<marquee><font color="C62828">THANKS TO: </font><font color="00EE5FF">
+Anonymous      --      Alpraz     --     Crazy4U       --       Dimitar      --      Err0r      --      Zevinskj       --       Hydra       --       CCCP      --      Zannabis      --      Zer0       --      EvliLine       --      Gomma     --      RBX      </font></marquee>
+</div>
+< audio id="audio" autoplay="" loop="">
+<source src="https://vocaroo.com/i/s01rMFvd3XFu" type="audio/mp3">
+</audio>
+</body>
+</html>
